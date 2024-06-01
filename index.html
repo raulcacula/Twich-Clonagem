@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twich</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_NF5vOtMlxRknnkak2iYJwcHPdlr-uQHB6Q&s">
+    <link rel="stylesheet" href="twich.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="left">
+                <span class="logo-header"><i class="fa-brands fa-twitch"></i></span>
+                <h1>procurar</h1>
+                <button id="canais1" onclick="canais()"><i class="fa-solid fa-caret-up"></i>
+                <span>Fechar canais</span> </button>
+                <button id="canais2" onclick="canais2()"><i class="fa-solid fa-caret-down"></i>
+                    <span>Abrir </span></button>
+            </div>
+
+            <div class="center">
+                <input type="text" placeholder="pesquise..." class="search-input">
+                <button id="onelupa"><i class="fa-solid fa-magnifying-glass"></i>
+                 </button>
+                 <button id="twolupa" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i>
+                 </button>
+            </div>
+
+
+            <div class="right">
+                <button onclick="LiberaLogin()" class="btn-entrar">entrar</button>
+                <button onclick="LiberaLogin()" class="btn-cadastra">cadastrar</button>
+                <span onclick="opLibera()" class="OpUser"><i class="fa-regular fa-user"></i></span>
+                <button onclick="opFechar()" class="x-dark"><i class="fa-solid fa-user-minus"></i></button>
+            </div>
+        </nav>
+    </header>
+    <div class="center-2">
+        <div class="input-mobile">
+        <input type="text" placeholder="pesquise..." class="search-input2">
+        <button><i class="fa-solid fa-magnifying-glass"></i>
+            <button id="fecharSearch" onclick="FecharSearc()"><i class="fa-solid fa-chevron-left"></i></button>
+         </button>
+    </div>
+    </div>
+
+    <div class="user-op">
+        <div class="op-container">
+            <button>
+                <i class="fa-solid fa-globe"></i> 
+                idioma
+                <span>></span>
+            </button>
+            <button id="dark">
+                <i class="fa-solid fa-moon"></i>
+                Tema escuro
+                <span>
+                <input type="checkbox"  id="dark">
+                </span>
+            </button>
+            <button class="OpUser">
+                <i class="fa-solid fa-door-open"></i>
+                 Entrar
+                 <span>></span>
+           </button>
+        </div>
+    </div>
+
+    <div class="nav-left">
+        <div class="titulo-nav">
+            <h1>canais recomendados</h1>
+            <button></button>
+        </div>
+        <div class="nav-column">
+            <button>
+                <img class="nav-logo" src="https://static-cdn.jtvnw.net/jtv_user_pictures/c07acddc-1e1b-479f-97c4-09636f80e857-profile_image-300x300.png" alt="">
+                <div class="canal-titulo">
+                    <h1>Loud coringa</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>35,7 mil</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://static-cdn.jtvnw.net/jtv_user_pictures/00e7ebf9-89b9-41e1-b2bc-263b0ce805d0-profile_image-300x300.png" alt="">
+                <div class="canal-titulo">
+                    <h1>JonVlogs</h1>
+                    <span>IRL</span>
+                </div>
+                <div class="canal-users">
+                    <span>24,4 mil</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2021/11/11/imagem_2021-11-11_151423.png " alt="">
+                <div class="canal-titulo">
+                    <h1>Alanzoka</h1>
+                    <span>Games</span>
+                </div>
+                <div class="canal-users">
+                    <span>2,4 mil</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://yt3.googleusercontent.com/GzvHBVKUVjkIIPaFSHaeoKIzJ8sdNH4Oen3wqi5_myhEOsFWx7kkNMerDYdXXhX-8oUufTTh5A=s900-c-k-c0x00ffffff-no-rj" alt="">
+                <div class="canal-titulo">
+                    <h1>yuri22</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>38,3 mil</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://s2-techtudo.glbimg.com/v8-SC3ZWvsJyHPFE2hi3BWq20mk=/0x0:1280x640/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/r/j/rz42sXSdmiiBHwobd7Mg/0.jpeg" alt="">
+                <div class="canal-titulo">
+                    <h1>Niel ip</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>5 mil</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbAeVwrdv6wsLlycVkExUQaoomsQFvC2tV4Q&s" alt="">
+                <div class="canal-titulo">
+                    <h1>Gabeepeixe</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>15,4 mil</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://s2-techtudo.glbimg.com/v8-SC3ZWvsJyHPFE2hi3BWq20mk=/0x0:1280x640/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/r/j/rz42sXSdmiiBHwobd7Mg/0.jpeg" alt="">
+                <div class="canal-titulo">
+                    <h1>Niel ip</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>5 mil</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbAeVwrdv6wsLlycVkExUQaoomsQFvC2tV4Q&s" alt="">
+                <div class="canal-titulo">
+                    <h1>Gabeepeixe</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>15,4 mil</span>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <!--SLIDE MOBILE-->
+
+    <div class="conteudo" >
+        <div class="slider">
+            <div class="slide slide1">
+                <div class="captura">
+                    <a href="Live.html">
+                    <button><img class="slide-canal" src="https://static-cdn.jtvnw.net/jtv_user_pictures/c07acddc-1e1b-479f-97c4-09636f80e857-profile_image-300x300.png" alt=""><h1>Loud coringa</h1>
+                        <span>Aovivo</span> </button>
+                    </a>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="captura">
+                    <a href="Live.html">
+                        <button><img class="slide-canal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjbliowUEZyt5X2XoHBTFu7yS81Q_X4mQrJ4NdNV_IbQ&s" alt=""><h1>Cazemiro</h1>
+                            <span>Aovivo</span> </button>
+                    </a>
+                </div>
+            </div>
+            <div class="slide slide3">
+                <div class="captura">
+                    <a href="Live.html">
+                        <button><img class="slide-canal" src="https://www.girofinancas.com.br/wp-content/uploads/2023/09/paulinho-loko.webp" alt=""><h1>PaulinhoOLoko</h1>
+                            <span>Aovivo</span> </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="carrossel"  id="template-areas">
+        <div class="slider" >
+            <div class="slider-1 ">
+                <a href="Live.html" class="sliders on">
+                <img src="https://assets.help.twitch.tv/article/img/000002339-01.gif" alt="">
+                </a>
+            </div>
+            <div class="slider-1">
+                <a href="Live.html" class="sliders">
+                <img src="https://eshop.macsales.com/blog/wp-content/uploads/2018/08/giphy.gif" alt="">
+                </a>
+            </div>
+        </div>
+        <button id="next">></button>
+    </div>
+
+    <div class="titulo-stramers">
+        <h1><span>Canais ao vivo</span> que achamos que você vai gostar</h1>
+    </div>
+
+
+    <div class="live" id="template-areas">
+        <div id="stramers">
+            <div class="live-container">
+                <a href="Live.html">
+                <div class="live-capa">
+                    <img  src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2021/11/11/imagem_2021-11-11_151423.png " alt="">
+                    <span>ao vivo</span>
+                    <p>18,1 mil espectadores</p>        
+                </div>   
+                <div class="live-details">
+                    <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2021/11/11/imagem_2021-11-11_151423.png " alt="">
+                    <div class="live-details-desc">
+                        <h1>Livezinha do Alanzoka</h1>
+                        <p>Alanzoka</p>
+                        <span>so na conversa</span>
+                        <div class="categoria">
+                        <button>Português</button>
+                        <button>Esporte</button>
+                        </div><!--CATEGOTIA-->
+                    </div>
+                </div>
+                </a>   
+        </div><!--LIVE CONTAINER-->
+        <div class="live-container">
+            <a href="Live.html">
+            <div class="live-capa">
+                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZU0XmblSWpv_25qCbArifHXVkRb5NibsjxQgIQ0GqpA&s" alt="">
+                <span>ao vivo</span>
+                <p>500 espectadores</p>        
+            </div>   
+            <div class="live-details">
+                <img src="https://play-lh.googleusercontent.com/83-Isz__2Fe17EwytoowRl2tApZyEfat-GHId6SF0U4QtEyOLj5CpsK7LLyScWVUdtA=w240-h480-rw" alt="">
+                <div class="live-details-desc">
+                    <h1>Flamengo x Corinthians</h1>
+                    <p>Futebol ao vivo</p>
+                    <span>Futebol</span>
+                    <div class="categoria">
+                        <button>Português</button>
+                        <button>Esporte</button>
+                        </div><!--CATEGOTIA-->
+                </div>
+            </div>
+            </a>   
+        </div><!--LIVE CONTAINER-->
+        
+        <div class="live-container">
+        <a href="Live.html">
+        <div class="live-capa">
+            <img  src="https://clips-media-assets2.twitch.tv/B38IdhwxIa22TVVatbLJHg/AT-cm%7CB38IdhwxIa22TVVatbLJHg-preview-480x272.jpg" alt="">
+            <span>ao vivo</span>
+            <p>24,2 mil espectadores</p>        
+        </div>   
+        <div class="live-details">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/00e7ebf9-89b9-41e1-b2bc-263b0ce805d0-profile_image-300x300.png" alt="">
+            <div class="live-details-desc">
+                <h1>IRL do Jon</h1>
+                <p>JonVlogs</p>
+                <span>so na conversa</span>
+                <div class="categoria">
+                    <button>Português</button>
+                    <button>IRL</button>
+                    <button>BDJ</button>
+                    </div><!--CATEGOTIA-->
+            </div>
+        </div>
+        </a>   
+        </div><!--LIVE CONTAINER-->
+        
+        <div class="live-container">
+        <a href="Live.html">
+        <div class="live-capa">
+        <img src="https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/4c6485c8287addb8517c_loud_coringa_16352110905_9065595562//thumb/thumb1647975536-276x155.jpg" alt="">
+        <span>ao vivo</span>
+        <p>35,7 mil espectadores</p>        
+        </div>   
+        <div class="live-details">
+        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/c07acddc-1e1b-479f-97c4-09636f80e857-profile_image-300x300.png" alt="">
+        <div class="live-details-desc">
+            <h1>Mais uma live !!</h1>
+            <p>Loud Coringa</p>
+            <span>Gamer</span>
+            <div class="categoria">
+                <button>Português</button>
+                <button>Games</button>
+                <button>Esporte</button>
+                </div><!--CATEGOTIA-->
+        </div>
+        </div>
+        </a>   
+        </div><!--LIVE CONTAINER-->
+
+        <!--VER MAIS-->
+
+        <div class="live-container live-container-mais">
+            <a href="Live.html">
+            <div class="live-capa">
+            <img src="https://www.musicasmaistocadas.club/app/wp-content/uploads/2020/02/Batalha-da-Aldeia-Zuluz%C3%A3o-Alva-JayA-Luuck-Tavin-Andrade-Mike-Salvador-Bob-13-Eminente.jpg" alt="">
+            <span>ao vivo</span>
+            <p>700 espectadores</p>        
+            </div>   
+            <div class="live-details">
+            <img src="https://www.musicasmaistocadas.club/app/wp-content/uploads/2020/02/Batalha-da-Aldeia-Zuluz%C3%A3o-Alva-JayA-Luuck-Tavin-Andrade-Mike-Salvador-Bob-13-Eminente.jpg" alt="">
+            <div class="live-details-desc">
+                <h1>BDA finais</h1>
+                <p>BatalhadaAldeia</p>
+                <span>rima</span>
+                <div class="categoria">
+                    <button>Português</button>
+                    <button>papo</button>
+                    <button>Esporte</button>
+                    </div><!--CATEGOTIA-->
+            </div>
+            </div>
+            </a>   
+            </div><!--LIVE CONTAINER-->
+
+            <div class="live-container live-container-mais2">
+                <a href="Live.html">
+                <div class="live-capa">
+                <img src="https://assets.gamearena.gg/wp-content/uploads/2021/10/30015622/LoL-A-historia-do-League-of-Legends-um-dos-jogos-mais-jogados-do-mundo.png" alt="">
+                <span>ao vivo</span>
+                <p>150 espectadores</p>        
+                </div>   
+                <div class="live-details">
+                <img src="https://assets.gamearena.gg/wp-content/uploads/2021/10/30015622/LoL-A-historia-do-League-of-Legends-um-dos-jogos-mais-jogados-do-mundo.png" alt="">
+                <div class="live-details-desc">
+                    <h1>Vamos jogar LoL ?</h1>
+                    <p>Games do dia</p>
+                    <span>gamer</span>
+                    <div class="categoria">
+                        <button>Gamer</button>
+                        </div><!--CATEGOTIA-->
+                </div>
+                </div>
+                </a>   
+                </div><!--LIVE CONTAINER-->
+
+
+                <div class="live-container live-container-mais3">
+                    <a href="Live.html">
+                    <div class="live-capa">
+                    <img src="https://img.dhost.cloud/9pfGD-mw1-ixsJSnEAYTBzJPhQ0=/700x429/smart/https://ojornalextra.us-east-1.linodeobjects.com/uploads/imagens/2023/10/Screenshot_1-2.jpg" alt="">
+                    <span>ao vivo</span>
+                    <p>1,4 espectadores</p>        
+                    </div>   
+                    <div class="live-details">
+                    <img src="https://preview.redd.it/59ap9n77e96c1.png?width=640&crop=smart&auto=webp&s=e25736c5bf95a3c0c60114cd59b0cefff122fd89" alt="">
+                    <div class="live-details-desc">
+                        <h1>Mais uma pra conta!!</h1>
+                        <p>O Stramerrs</p>
+                        <span>Jogos online</span>
+                        <div class="categoria">
+                            <button>jogos</button>
+                            <button>entreterimento</button>
+                            </div><!--CATEGOTIA-->
+                    </div>
+                    </div>
+                    </a>   
+                    </div><!--LIVE CONTAINER-->
+
+                    <div class="live-container live-container-mais4">
+                        <a href="Live.html">
+                        <div class="live-capa">
+                        <img src="https://s2-ge.glbimg.com/87RnZ3zziikeXTD4rDFDILlUGYk=/0x0:1270x713/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/p/H/NLViDAQmCgouZBIEeAqg/fifa-22-online.png" alt="">
+                        <span>ao vivo</span>
+                        <p>3,3 espectadores</p>        
+                        </div>   
+                        <div class="live-details">
+                        <img src="https://s2-ge.glbimg.com/87RnZ3zziikeXTD4rDFDILlUGYk=/0x0:1270x713/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/p/H/NLViDAQmCgouZBIEeAqg/fifa-22-online.png" alt="">
+                        <div class="live-details-desc">
+                            <h1>Vem pra live de fifa!! Oitavas de finais</h1>
+                            <p>Cristian Game</p>
+                            <span>fifa</span>
+                            <div class="categoria">
+                                <button>jogos</button>
+                                <button>entreterimento</button>
+                                </div><!--CATEGOTIA-->
+                        </div>
+                        </div>
+                        </a>   
+                        </div><!--LIVE CONTAINER-->
+
+
+        </div><!--# -->
+    </div>
+
+    <button id="ver-mais" onclick="verMais()">ver mais <i class="fa-solid fa-angle-down"></i></button>
+
+
+
+    <div class="titulo-stramers titulo-stramers2">
+        <h1>Canais <span>Só na conversa</span> recomendados</h1>
+    </div>
+
+
+    <div class="live live2" id="template-areas">
+        <div id="stramers">
+            <div class="live-container ">
+                <a href="Live.html">
+                <div class="live-capa">
+                    <img  src="https://images-cdn.own3d.tv/uploads/2018/10/stream-talking-banner-ops-series-cod-greenscreen-screenshot.jpg" alt="">
+                    <span>ao vivo</span>
+                    <p>5,1 mil espectadores</p>        
+                </div>   
+                <div class="live-details">
+                    <img src="https://images-cdn.own3d.tv/uploads/2018/10/stream-talking-banner-ops-series-cod-greenscreen-screenshot.jpg" alt="">
+                    <div class="live-details-desc">
+                        <h1>React + games</h1>
+                        <p>João twich</p>
+                        <span>so na conversa</span>
+                        <div class="categoria">
+                        <button>Português</button>
+                        <button>games</button>
+                        </div><!--CATEGOTIA-->
+                    </div>
+                </div>
+                </a>   
+        </div><!--LIVE CONTAINER-->
+
+        <div class="live-container ">
+            <a href="Live.html">
+            <div class="live-capa">
+                <img  src="https://static-pt.wondershare.com/images-www/filmora/resoure/win/twitch.jpg" alt="">
+                <span>ao vivo</span>
+                <p>5,1 mil espectadores</p>        
+            </div>   
+            <div class="live-details">
+                <img src="https://static-pt.wondershare.com/images-www/filmora/resoure/win/twitch.jpg" alt="">
+                <div class="live-details-desc">
+                    <h1>Live crazyyy!!!</h1>
+                    <p>Noosh</p>
+                    <span>so na conversa</span>
+                    <div class="categoria">
+                    <button>Englesh</button>
+                    <button>live</button>
+                    </div><!--CATEGOTIA-->
+                </div>
+            </div>
+            </a>   
+    </div><!--LIVE CONTAINER-->
+
+    <div class="live-container ">
+        <a href="Live.html">
+        <div class="live-capa">
+            <img  src="https://pbs.twimg.com/ext_tw_video_thumb/1716928757183963136/pu/img/QKB8io4XCo7ik2Fs.jpg:large" alt="">
+            <span>ao vivo</span>
+            <p>15,4 mil espectadores</p>        
+        </div>   
+        <div class="live-details">
+            <img src="https://pbs.twimg.com/ext_tw_video_thumb/1716928757183963136/pu/img/QKB8io4XCo7ik2Fs.jpg:large" alt="">
+            <div class="live-details-desc">
+                <h1>Só na resenha com a tropa</h1>
+                <p>gabeepeixe</p>
+                <span>so na conversa</span>
+                <div class="categoria">
+                <button>live</button>
+                </div><!--CATEGOTIA-->
+            </div>
+        </div>
+        </a>   
+</div><!--LIVE CONTAINER-->
+
+<div class="live-container">
+    <a href="Live.html">
+    <div class="live-capa">
+        <img  src="https://marketplace.canva.com/EAFUFMkg08M/1/0/1600w/canva-overlay-para-twitch-stream-neon-roxo-e-preto-KIGiwANAhfA.jpg" alt="">
+        <span>ao vivo</span>
+        <p>3,4 mil espectadores</p>        
+    </div>   
+    <div class="live-details">
+        <img src="https://marketplace.canva.com/EAFUFMkg08M/1/0/1600w/canva-overlay-para-twitch-stream-neon-roxo-e-preto-KIGiwANAhfA.jpg" alt="">
+        <div class="live-details-desc">
+            <h1>me acompanhe nessa live!!</h1>
+            <p>iza gamer</p>
+            <span>so na conversa</span>
+            <div class="categoria">
+            <button>games</button>
+            <button>live</button>
+            </div><!--CATEGOTIA-->
+        </div>
+    </div>
+    </a>   
+</div><!--LIVE CONTAINER-->
+
+    </div><!--# -->
+</div>
+
+
+<div class="titulo-stramers titulo-stramers2">
+    <h1><span>Categorias</span> que achamos que goste</h1>
+</div>
+
+ 
+   <div class="categoria-card" id="template-areas">
+    <div id="categ-flex">
+        <div class="card">
+        <a href="">
+        <img src="https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_1200x1600_Portrait%20Store%20Banner-1200x1600-382243057711adf80322ed2aeea42191.jpg" alt="">
+        <div class="categ-titulo">
+            <h1>Grand theft auto V</h1>
+            <span>400,3 mil pessoas</span>
+            <div class="categoria categoria2">
+                <button>games</button>
+                <button>live</button>
+                </div><!--CATEGOTIA-->
+        </div>
+        </a>
+        </div><!--CARD-->
+        <div class="card">
+            <a href="">
+            <img src="https://fia.com.br/wp-content/uploads/2022/06/pod.jpg" alt="">
+            <div class="categ-titulo">
+                <h1>Só na conversa</h1>
+                <span>370,3 mil pessoas</span>
+                <div class="categoria categoria2">
+                    <button>live</button>
+                    <button>conversa</button>
+                    </div><!--CATEGOTIA-->
+            </div>
+            </a>
+            </div><!--CARD-->
+            <div class="card">
+                <a href="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvN8EuQlj4QrpOJrFixJFmhSYt3ERa5ZS93vBK1Yp8yA&s" alt="">
+                <div class="categ-titulo">
+                    <h1>Fortnite</h1>
+                    <span>192,9 mil pessoas</span>
+                    <div class="categoria categoria2">
+                        <button>live</button>
+                        <button>games</button>
+                        </div><!--CATEGOTIA-->
+                </div>
+                </a>
+                </div><!--CARD-->
+                <div class="card">
+                    <a href="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV4g95BlDVFZX2C1VQW8UT-nlQrDBZp8jUA91oquuOrA&s" alt="">
+                    <div class="categ-titulo">
+                        <h1>Minecraft</h1>
+                        <span>92,9 mil pessoas</span>
+                        <div class="categoria categoria2">
+                            <button>live</button>
+                            <button>games</button>
+                            </div><!--CATEGOTIA-->
+                    </div>
+                    </a>
+                    </div><!--CARD-->
+
+                    <div class="card">
+                        <a href="">
+                        <img src="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-d9ca2c0fbaff9d80e8dedfbd726aa438" alt="">
+                        <div class="categ-titulo">
+                            <h1>valorant</h1>
+                            <span>90,9 mil pessoas</span>
+                            <div class="categoria categoria2">
+                                <button>live</button>
+                                <button>games</button>
+                                </div><!--CATEGOTIA-->
+                        </div>
+                        </a>
+                        </div><!--CARD-->
+                        
+                    <div class="card">
+                        <a href="">
+                        <img src="https://cdn.wizard.com.br/wp-content/uploads/2020/10/09181758/como-falar-sobre-esportes-em-espanhol.png" alt="">
+                        <div class="categ-titulo">
+                            <h1>Esporte</h1>
+                            <span>82,9 mil pessoas</span>
+                            <div class="categoria categoria2">
+                                <button>live</button>
+                                <button>esporte</button>
+                                </div><!--CATEGOTIA-->
+                        </div>
+                        </a>
+                        </div><!--CARD-->
+
+    </div>
+   </div>
+
+
+   <div class="titulo-stramers titulo-stramers2">
+    <h1><span>Games</span> do dia</h1>
+</div>
+
+   
+<div class="live live2" id="template-areas">
+    <div id="stramers">
+        <div class="live-container ">
+            <a href="Live.html">
+            <div class="live-capa">
+                <img  src="https://i.ytimg.com/vi/pAxeqklDhQY/maxresdefault.jpg" alt="">
+                <span>ao vivo</span>
+                <p>2,1 mil espectadores</p>        
+            </div>   
+            <div class="live-details">
+                <img src="https://i.ytimg.com/vi/pAxeqklDhQY/maxresdefault.jpg" alt="">
+                <div class="live-details-desc">
+                    <h1>Rpzinho com times</h1>
+                    <p>Lucas da grota</p>
+                    <span>gta</span>
+                    <div class="categoria">
+                    <button>Português</button>
+                    <button>games</button>
+                    </div><!--CATEGOTIA-->
+                </div>
+            </div>
+            </a>   
+    </div><!--LIVE CONTAINER-->
+
+    <div class="live-container ">
+        <a href="Live.html">
+        <div class="live-capa">
+            <img  src="https://s2-techtudo.glbimg.com/v8-SC3ZWvsJyHPFE2hi3BWq20mk=/0x0:1280x640/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/r/j/rz42sXSdmiiBHwobd7Mg/0.jpeg" alt="">
+            <span>ao vivo</span>
+            <p>12,1 mil espectadores</p>        
+        </div>   
+        <div class="live-details">
+            <img src="https://s2-techtudo.glbimg.com/v8-SC3ZWvsJyHPFE2hi3BWq20mk=/0x0:1280x640/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/r/j/rz42sXSdmiiBHwobd7Mg/0.jpeg" alt="">
+            <div class="live-details-desc">
+                <h1>Rumo a mestre !! nova temporada</h1>
+                <p>Niel ip</p>
+                <span>Freefire</span>
+                <div class="categoria">
+                <button>games</button>
+                <button>live</button>
+                </div><!--CATEGOTIA-->
+            </div>
+        </div>
+        </a>   
+</div><!--LIVE CONTAINER-->
+
+<div class="live-container ">
+    <a href="Live.html">
+    <div class="live-capa">
+        <img  src="https://www.adrenaline.com.br/wp-content/uploads/2024/03/Simulador-de-supermercado-faz-sucesso-na-Steam-01.jpg" alt="">
+        <span>ao vivo</span>
+        <p>400  espectadores</p>        
+    </div>   
+    <div class="live-details">
+        <img src="https://www.adrenaline.com.br/wp-content/uploads/2024/03/Simulador-de-supermercado-faz-sucesso-na-Steam-01.jpg" alt="">
+        <div class="live-details-desc">
+            <h1>Jogando Simulador de mercado</h1>
+            <p>Lucas games</p>
+            <span>games</span>
+            <div class="categoria">
+            <button>live</button>
+            </div><!--CATEGOTIA-->
+        </div>
+    </div>
+    </a>   
+</div><!--LIVE CONTAINER-->
+
+<div class="live-container ">
+<a href="Live.html">
+<div class="live-capa">
+    <img  src="https://cdn.akamai.steamstatic.com/steam/apps/1551360/ss_733100a0e305025cfea4797c14cb55a9e2673521.1920x1080.jpg?t=1714086603" alt="">
+    <span>ao vivo</span>
+    <p>2,5 mil espectadores</p>        
+</div>   
+<div class="live-details">
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1551360/ss_733100a0e305025cfea4797c14cb55a9e2673521.1920x1080.jpg?t=1714086603" alt="">
+    <div class="live-details-desc">
+        <h1>Forza 5 com os inscritos</h1>
+        <p>Cod games</p>
+        <span>so na conversa</span>
+        <div class="categoria">
+        <button>games</button>
+        <button>live</button>
+        </div><!--CATEGOTIA-->
+    </div>
+</div>
+</a>   
+</div><!--LIVE CONTAINER-->
+
+</div><!--# -->
+</div>
+
+
+
+<div class="live live3" id="template-areas">
+    <div id="stramers">
+        <div class="live-container ">
+            <a href="Live.html">
+            <div class="live-capa">
+                <img  src="https://i.ytimg.com/vi/pAxeqklDhQY/maxresdefault.jpg" alt="">
+                <span>ao vivo</span>
+                <p>2,1 mil espectadores</p>        
+            </div>   
+            <div class="live-details">
+                <img src="https://i.ytimg.com/vi/pAxeqklDhQY/maxresdefault.jpg" alt="">
+                <div class="live-details-desc">
+                    <h1>Rpzinho com times</h1>
+                    <p>Lucas da grota</p>
+                    <span>gta</span>
+                    <div class="categoria">
+                    <button>Português</button>
+                    <button>games</button>
+                    </div><!--CATEGOTIA-->
+                </div>
+            </div>
+            </a>   
+    </div><!--LIVE CONTAINER-->
+
+    <div class="live-container ">
+        <a href="Live.html">
+        <div class="live-capa">
+            <img  src="https://s2-techtudo.glbimg.com/v8-SC3ZWvsJyHPFE2hi3BWq20mk=/0x0:1280x640/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/r/j/rz42sXSdmiiBHwobd7Mg/0.jpeg" alt="">
+            <span>ao vivo</span>
+            <p>12,1 mil espectadores</p>        
+        </div>   
+        <div class="live-details">
+            <img src="https://s2-techtudo.glbimg.com/v8-SC3ZWvsJyHPFE2hi3BWq20mk=/0x0:1280x640/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/r/j/rz42sXSdmiiBHwobd7Mg/0.jpeg" alt="">
+            <div class="live-details-desc">
+                <h1>Rumo a mestre !! nova temporada</h1>
+                <p>Niel ip</p>
+                <span>Freefire</span>
+                <div class="categoria">
+                <button>games</button>
+                <button>live</button>
+                </div><!--CATEGOTIA-->
+            </div>
+        </div>
+        </a>   
+</div><!--LIVE CONTAINER-->
+
+<div class="live-container ">
+    <a href="Live.html">
+    <div class="live-capa">
+        <img  src="https://www.adrenaline.com.br/wp-content/uploads/2024/03/Simulador-de-supermercado-faz-sucesso-na-Steam-01.jpg" alt="">
+        <span>ao vivo</span>
+        <p>400  espectadores</p>        
+    </div>   
+    <div class="live-details">
+        <img src="https://www.adrenaline.com.br/wp-content/uploads/2024/03/Simulador-de-supermercado-faz-sucesso-na-Steam-01.jpg" alt="">
+        <div class="live-details-desc">
+            <h1>Jogando Simulador de mercado</h1>
+            <p>Lucas games</p>
+            <span>games</span>
+            <div class="categoria">
+            <button>live</button>
+            </div><!--CATEGOTIA-->
+        </div>
+    </div>
+    </a>   
+</div><!--LIVE CONTAINER-->
+
+<div class="live-container">
+<a href="Live.html">
+<div class="live-capa">
+    <img  src="https://cdn.akamai.steamstatic.com/steam/apps/1551360/ss_733100a0e305025cfea4797c14cb55a9e2673521.1920x1080.jpg?t=1714086603" alt="">
+    <span>ao vivo</span>
+    <p>2,5 mil espectadores</p>        
+</div>   
+<div class="live-details">
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1551360/ss_733100a0e305025cfea4797c14cb55a9e2673521.1920x1080.jpg?t=1714086603" alt="">
+    <div class="live-details-desc">
+        <h1>Forza 5 com os inscritos</h1>
+        <p>Cod games</p>
+        <span>so na conversa</span>
+        <div class="categoria">
+        <button>games</button>
+        <button>live</button>
+        </div><!--CATEGOTIA-->
+    </div>
+</div>
+</a>   
+</div><!--LIVE CONTAINER-->
+
+</div><!--# -->
+</div>
+<button id="ver-mais" onclick="verMais2()">ver mais <i class="fa-solid fa-angle-down"></i></button>
+
+
+<div class="login">
+    <div class="login-container">
+
+        <div class="login-titulo">
+            <span><i class="fa-brands fa-twitch"></i></span>
+        <h1>
+             entrar com a twich
+        </h1>
+        <button onclick="fecharLo()" id="FecharLogin">
+            X
+        </button>
+        </div>
+
+        <div class="login-input">
+            <p>Email</p>
+            <input type="email" id="email">
+            <br>
+            <br>
+            <p>senha</p>
+            <input type="password" id="senha">
+            <button>Esqueci a senha!</button>
+
+            <button id="enter">entrar</button>
+        </div>
+        <a href="" class="cadastrar">Ainda sem conta? Cadastra-se agora</a>
+    </div>
+</div>
+
+
+
+    <script src="twich.js"></script>
+
+     <!-- FONT ROBOTO-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+ 
+     <script src="https://kit.fontawesome.com/43fd509247.js" crossorigin="anonymous"></script>
+ 
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</body>
+</html>

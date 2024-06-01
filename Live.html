@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twich - Live</title>
+    <link rel="stylesheet" href="live.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="left">
+                <a href="index.html">
+                <span class="logo-header"><i class="fa-brands fa-twitch"></i></span>
+                </a>
+                <h1>procurar</h1>
+                <button id="canais1" onclick="canais()"><i class="fa-solid fa-caret-up"></i>
+                <span>Fechar canais</span> </button>
+                <button id="canais2" onclick="canais2()"><i class="fa-solid fa-caret-down"></i>
+                    <span>Abrir </span></button>
+            </div>
+
+            <div class="center">
+                <input type="text" placeholder="pesquise..." class="search-input">
+                <button><i class="fa-solid fa-magnifying-glass"></i>
+                 </button>
+            </div>
+
+            <div class="right">
+                <button onclick="LiberaLogin2()" class="btn-entrar">entrar</button>
+                <button class="btn-cadastra">cadastrar</button>
+                <span onclick="opLibera2()" class="OpUser"><i class="fa-regular fa-user"></i></span>
+                <button onclick="opFechar()" class="x-dark"><i class="fa-solid fa-user-minus"></i></button>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="user-op">
+        <div class="op-container">
+            <button>
+                <i class="fa-solid fa-globe"></i> 
+                idioma
+                <span>></span>
+            </button>
+            <button id="dark">
+                <i class="fa-solid fa-moon"></i>
+                Tema escuro
+                <span>
+                <input type="checkbox"  id="dark">
+                </span>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="nav-left">
+        <div class="titulo-nav">
+            <h1>canais recomendados</h1>
+            <button></button>
+        </div>
+        <div class="nav-column">
+            <button>
+                <img class="nav-logo" src="https://marcuspessoa.com/wp-content/uploads/2021/03/capa-para-facebook26.jpg" alt="">
+                <div class="canal-titulo">
+                    <h1>Canal 1</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>900 </span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://static.vecteezy.com/system/resources/previews/020/911/737/non_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="">
+                <div class="canal-titulo">
+                    <h1>Canal 2</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>2 mil</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://static.vecteezy.com/system/resources/previews/020/911/737/non_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="">
+                <div class="canal-titulo">
+                    <h1>Canal 3</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>2,4 mil</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://static.vecteezy.com/system/resources/previews/020/911/737/non_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="">
+                <div class="canal-titulo">
+                    <h1>Canal 3</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>800</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://static.vecteezy.com/system/resources/previews/020/911/737/non_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="">
+                <div class="canal-titulo">
+                    <h1>Canal 4</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>5 mil</span>
+                </div>
+            </button>
+            <button>
+                <img class="nav-logo" src="https://static.vecteezy.com/system/resources/previews/020/911/737/non_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="">
+                <div class="canal-titulo">
+                    <h1>Canal 5</h1>
+                    <span>so na conversa</span>
+                </div>
+                <div class="canal-users">
+                    <span>22 mil</span>
+                </div>
+            </button>
+        </div>
+    </div>
+
+
+    <section class="container" id="template-areas">
+        <div id="tela-live">
+            <div class="tela">
+                <img src="https://cdn.dribbble.com/users/527354/screenshots/5057270/bouncing_twitch.gif" alt="">
+                    <span>Ao vivo</span>
+                    <div class="live-details">
+                        <button><i class="fa-solid fa-play"></i></button>
+                        <button><i class="fa-solid fa-volume-high"></i></button>
+                        <div>
+                            <i class="fa-solid fa-gear"></i>
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+            </div>
+        </div><!--TELA LIVE-->
+        <div id="chat">
+            <div class="chat-titulo">
+                <button><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                <h1>Chat da trasmissão</h1>
+            </div>
+            <div class="chat-presente">
+                <a href="">
+                    <span><i class="fa-solid fa-gift"></i></span>
+                    <div>
+                        <h1>user_twich</h1>
+                        <p><i class="fa-brands fa-padlet"></i> 2000</p>
+                    </div>
+                </a>
+                <a href="">
+                    <span><i class="fa-solid fa-gift"></i></span>
+                    <div>
+                        <h1>user_twich-2</h1>
+                        <p><i class="fa-brands fa-padlet"></i> 6000</p>
+                    </div>
+                </a>
+            </div>
+            <div class="chat-live">
+                <div class="chat-p">
+                    <a href="">
+                       <h1>User 1:</h1> 
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo eligendi quibusdam ducimus, quis dignissimos, iusto. </p>
+                    </a>
+                    <a href="">
+                        <h1>User 2:</h1> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo eligendi quibusdam ducimus, quis dignissimos, iusto. </p>
+                     </a>
+                     <a href="">
+                        <h1>User 3:</h1> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo eligendi quibusdam ducimus, quis dignissimos, iusto. </p>
+                     </a>
+                     <a href="">
+                        <h1>User 4:</h1> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo eligendi quibusdam ducimus, quis dignissimos, iusto. </p>
+                     </a>
+                </div>
+                <div class="chat-mensagem">
+                    <input type="text" placeholder="Envie sua mensagem" id="mensagem">
+                    <button class="mensagem-enviar">></button>
+                    <button class="emoji-chat"><i class="fa-regular fa-face-smile"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="perfil">
+            <div class="perfil-details">
+                <a href="" class="perfil-img">
+                <img src="https://icones.pro/wp-content/uploads/2021/05/symbole-twitch-logo-icone-vert.png" alt="">
+                <span>Ao vivo</span>
+                </a>
+                <div class="user">
+                    <div class="user-descri">
+                    <h1>User_Twich</h1>
+                    <p>Me acompanhe jogando ????</p>
+                    <div>
+                    <a href="">Games</a>
+                    <button>Português</button>
+                    <button>Games</button>
+                    </div>
+                    </div><!--USER DESCRI-->
+    
+                    <div class="user-titulo">
+                        <button><i class="fa-regular fa-heart"></i> Seguir</button>
+                        <button><i class="fa-regular fa-star"></i> Inscrever-se</button>
+                    </div><!--USER TITULO-->
+                 </div>     
+            </div>
+            <div class="user-contagem">
+                <span><i class="fa-regular fa-user"></i> 200.000</span>
+                <span> 30.12.00</span>
+            </div>
+
+            <h1 class="titulo-descricao">Sobre User_Twich</h1>
+
+            <div class="descricao">
+                <span>10,2 mi <p>seguidores</p></span>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatibus a animi autem itaque magnam laborum mollitia molestiae asperiores odit! Libero voluptas quod esse consequatur quidem est veniam, inventore labore!</p>
+                <div>
+                <a href=""><i class="fa-brands fa-instagram"></i> instagram</a>
+                <a href=""><i class="fa-brands fa-tiktok"></i> tiktok</a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i> twiter</a>
+                </div>
+            </div>
+
+            <div class="live-sub">
+                <a href="">
+                    <img src="https://pbs.twimg.com/media/FFnfa47X0AA9tJg.jpg" alt="">
+                    <h1>Seja sub</h1>
+                </a>
+                <a href="">
+                    <img src="https://cdn.m7g.twitch.tv/ba46b4e5e395b11efd34/assets/uploads/fy23-twitch-blog-1920x1080-rightaligned-2.jpg?h=217&w=412&fm=jpg&auto=format" alt="">
+                </a>
+                <a class="bits">
+                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/06/Bits.2.png" alt="">
+                    <h1>Envie Bits</h1>
+                </a>
+            </div>
+        </div><!--PERFIL-->
+    </section>
+
+
+
+
+    <script src="live.js"></script>
+     <!-- FONT ROBOTO-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+ 
+     <script src="https://kit.fontawesome.com/43fd509247.js" crossorigin="anonymous"></script>
+ 
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</body>
+</html>
